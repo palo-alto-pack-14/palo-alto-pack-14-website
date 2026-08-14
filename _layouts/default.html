@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    {% if page.title %}{{ page.title }} · {% endif %}{{ site.title | default: "Cub Scout Pack" }}
+  </title>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+/>
+  <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
+  <meta name="description" content="{{ page.excerpt | default: site.description | default: 'Scouting adventures, friends, and fun.' | strip_html }}">
+</head>
+<body class="flex flex-col min-h-screen bg-slate-50 text-slate-800">
+  <!-- Top bar -->
+  <header class="text-cub-blue bg-white border-b border-slate-200">
+  <div class="max-w-6xl px-4 mx-auto">
+  <div class="flex items-center justify-between h-20">
+      <!-- Brand -->
+      <a href="{{ '/' | relative_url }}" class="flex items-center gap-3">
+        <img src="/assets/images/cub-scouts-logo-vector.svg" alt="Cub Scouts logo" width="60" height="60" style="width:60px;height:60px;">
+        <span class="text-lg font-bold tracking-tight text-cub-blue">Cub Scouts Pack 14</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="items-center hidden gap-6 md:flex">
+      <a class="text-sm font-medium text-slate-600 hover:text-cub-blue" href="{{ '/calendar/' | relative_url }}">Calendar</a>
+      <a class="text-sm font-medium text-slate-600 hover:text-cub-blue" href="{{ '/about/' | relative_url }}">About</a>
+      <a class="text-sm font-medium text-slate-600 hover:text-cub-blue" href="{{ '/faq/' | relative_url }}">FAQ</a>
+      <a class="px-4 py-2 text-sm font-semibold text-white rounded-lg bg-cub-blue hover:bg-cub-blue/90"
+          href="/join">Join</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="inline-flex items-center justify-center p-3 text-cub-blue rounded-lg md:hidden hover:bg-slate-100 focus:outline-none"
+              aria-label="Open menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+  </div>
+  </div>
+
+  <!-- Mobile menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden w-full px-4 pb-4 border-b border-slate-200 md:hidden">
+    <nav class="flex flex-col mt-2 space-y-1">
+      <a class="px-4 py-2 font-medium text-slate-700 rounded hover:bg-slate-100" href="{{ '/calendar/' | relative_url }}">Calendar</a>
+      <a class="px-4 py-2 font-medium text-slate-700 rounded hover:bg-slate-100" href="{{ '/about/' | relative_url }}">About</a>
+      <a class="px-4 py-2 font-medium text-slate-700 rounded hover:bg-slate-100" href="{{ '/faq/' | relative_url }}">FAQ</a>
+      <a class="px-4 py-2 mt-2 font-bold text-center text-white rounded-lg bg-cub-blue" href="{{ '/join/' | relative_url }}">Join</a>
+    </nav>
+  </div>
+  </header>
+
+  <!-- Page content -->
+  {% if page.fullBleed %}
+  <main id="content" class="flex-1">
+    {{ content }}
+  </main>
+  {% else %}
+  <main id="content" class="container flex-1 max-w-6xl px-6 py-10 mx-auto">
+    {% unless page.hideTitle %}
+      {% if page.title or page.subtitle %}
+        <div class="flex flex-col border-b border-gray-300 min-h-14">
+          {% if page.title %}
+            <h1 class="text-3xl font-bold text-cub-blue my-auto tracking-tight uppercase">{{ page.title }}</h1>
+          {% endif %}
+          {% if page.subtitle %}
+            <h2 class="my-auto mb-2 text-3xl font-bold text-cub-blue">{{ page.subtitle }}</h2>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endunless %}
+    <div class="mt-5 prose">
+      {{ content }}
+    </div>
+  </main>
+  {% endif %}
+
+  <!-- Footer -->
+  <footer class="mt-16 border-t border-slate-200 bg-cub-blue text-gray-50">
+    <div class="grid max-w-6xl gap-8 px-4 py-8 mx-auto md:grid-cols-3">
+      <div class="text-2xl font-bold tracking-wide text-center uppercase">
+        Do Your Best™
+        </div>
+      <div>
+        <div class="font-semibold">Contacts</div>
+        <p class="mt-2 text-sm">
+          <a class="text-cub-gold hover:underline" href="mailto:{{ site.cubmaster_email | default: 'info@example.org' }}">
+            {{ site.cubmaster_email | default: 'info@example.org' }}
+          </a>
+        </p>
+      </div>
+      <div>
+        <div class="font-semibold">Links</div>
+        <ul class="mt-2 space-y-1 text-sm">
+          <li><a class="text-cub-gold hover:underline" href="{{ '/join/' | relative_url }}">Join the Pack</a></li>
+          <li><a class="text-cub-gold hover:underline" href="{{ '/calendar/' | relative_url }}">Pack Calendar</a></li>
+          <li><a class="text-cub-gold hover:underline" href="https://www.pacsky.org/">Pacific Skyline Council</a></li>
+          <li><a class="text-cub-gold hover:underline" href="https://www.scouting.org/">Scouting.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="px-4 py-4 text-xs text-center border-t border-white/10 text-gray-50 bg-cub-blue">
+      <p class="font-bold">© {{ "now" | date: "%Y" }} Palo Alto Pack 14</p>
+      <p>Some phrases and logos used on this site are <a class="underline hover:text-cub-gold" href="https://licensingbsa.org/trademarks">trademarks of Scouting America</a></p>
+      <p class="mt-1">Based on <a class="underline hover:text-cub-gold" href="https://github.com/Pack57PaloAlto/pack57paloalto.github.io">Pack 57 Palo Alto</a> by Friends of Pack 57, licensed under the <a class="underline hover:text-cub-gold" href="https://github.com/Pack57PaloAlto/pack57paloalto.github.io/blob/main/LICENSE">Scouting America Non-Commercial License</a>. Modified by Pack 14.</p>
+    </div>
+  </footer>
+  <!-- Mobile menu JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      // Simple toggle function for mobile menu
+      function toggleMenu() {
+        const isOpen = mobileMenu.classList.toggle('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', !isOpen);
+      }
+
+      // Toggle on button click
+      mobileMenuButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+        toggleMenu();
+      });
+
+      // Close when clicking elsewhere on the page
+      document.addEventListener('click', function(event) {
+        if (!mobileMenu.classList.contains('hidden') &&
+            !mobileMenu.contains(event.target) &&
+            !mobileMenuButton.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

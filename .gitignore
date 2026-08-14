@@ -1,0 +1,21 @@
+# Real photos of pack members awaiting signed photo releases.
+# Never commit these — see pending-photos/README.md.
+/pending-photos/
+
+# Jekyll build output / cache
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Google Calendar API key
+gcalendar-key.json
+
+# macOS
+.DS_Store
+
+# Local Claude Code config (contains machine-specific paths/settings)
+.claude/
+
+# Large working copy, not part of the published site
+Pack14_Website_Copy.docx
