@@ -27,10 +27,7 @@ permalink: /about/
 
   <div class="mt-6 space-y-4 text-base leading-7 md:text-lg md:leading-8">
     <p>
-      We offer a safe and inclusive community centered on a vital long-game vision: growing the empathetic leaders our complex world needs.
-    </p>
-    <p>
-      By pairing outdoor exploration with emotional intelligence, environmental stewardship, and a commitment to service, we help your child build a strong moral anchor and experience a completely different kind of growth.
+      Pack 14 inspires and empowers young Cub Scouts to discover purpose through outdoor adventure, community service, and character building. Together, we are developing resilient, compassionate leaders who strengthen our community and shape a brighter future.
     </p>
   </div>
       <div class="flex">
