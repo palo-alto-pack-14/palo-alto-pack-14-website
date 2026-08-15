@@ -257,7 +257,7 @@ fullBleed: true
 <section class="bg-slate-50">
   <div class="max-w-6xl px-6 py-16 mx-auto">
     <h2 class="text-3xl font-extrabold tracking-wide text-center uppercase sm:text-4xl text-cub-blue">One Pack. Six Years of Adventure.</h2>
-    <p class="max-w-2xl mx-auto mt-3 text-center text-slate-600">Follow Rhapsody's journey from kindergarten through 5th grade — every year brings new challenges, friendships, and growth.</p>
+    <p class="max-w-2xl mx-auto mt-3 text-center text-slate-600">Follow Rhapsody's journey from kindergarten through fifth grade — every year brings new challenges, friendships, and growth.</p>
     <div class="grid gap-6 mt-10 sm:grid-cols-2 lg:grid-cols-3">
       <article class="overflow-hidden bg-white shadow-sm rounded-2xl ring-1 ring-slate-200">
         <img src="/assets/images/rhapsody/rhapsody-lions.png" alt="Rhapsody as a Lion Scout" class="object-cover w-full h-72" loading="lazy" decoding="async">
