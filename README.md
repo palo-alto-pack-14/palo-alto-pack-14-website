@@ -105,7 +105,7 @@ This project is licensed under the Scouting America Non-Commercial License - see
 - Non-profit educational organizations affiliated with Scouting America
 - Volunteers affiliated with Scouting America organizations
 
-For uses outside these terms, please contact [webmaster@pack14paloalto.com].
+For uses outside these terms, please contact [info@paloaltopack14.org].
 
 ## Acknowledgments
 
