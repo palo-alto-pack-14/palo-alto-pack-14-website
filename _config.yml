@@ -24,24 +24,23 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://paloaltopack14.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+timezone: America/Los_Angeles
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-google-calendar
   - jekyll-tailwindcss
 
-gcalendar:
-  key_file: ./gcalendar-key.json
-  calendars:
-    - name: Pack 14 Family Calendar
-      id: cc0b87a62da83339de22e1862ef687ffe79d36bdc1d7f6a9b17a7ae5014e9533@group.calendar.google.com
-      directory: events
-      layout: event-public
-      date_format: "%Y-%m-%d"
-      look_ahead: 365
+# Scoutbook Plus .ics calendar feed(s), fetched at build time by
+# _plugins/scoutbook_calendar.rb (no API key or service account needed —
+# these are public iCal feed URLs from the pack's Scoutbook Plus calendar).
+scoutbook_calendars:
+  - name: Pack 14 Family Calendar
+    url: https://api.scouting.org/advancements/events/calendar/29538
+    directory: events
+    layout: event-public
 
 
 # Exclude from processing.

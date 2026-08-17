@@ -62,13 +62,4 @@ hideTitle: true
     Download .ics
   </a>
   {% endif %}
-
-  {% if page.calendar_id %}
-  <a href="https://calendar.google.com/calendar/render?cid={{ page.calendar_id | url_encode }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg px-4 py-2 bg-yellow-400 text-cub-blue font-semibold hover:bg-yellow-300 transition">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-    </svg>
-    Subscribe to Pack 14 Calendar
-  </a>
-  {% endif %}
 </div>

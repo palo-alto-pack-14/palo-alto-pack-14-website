@@ -21,15 +21,15 @@ gem "minima", "~> 2.0"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-tailwindcss", "~> 0.7.0"
-  gem "jekyll-google-calendar" unless ENV['SKIP_GCALENDAR']
 end
 
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", ">= 1", "< 3"
-  gem "tzinfo-data"
-end
+# Parses the Scoutbook Plus .ics calendar feed (see _plugins/scoutbook_calendar.rb).
+gem "icalendar", "~> 2.10"
+
+# Needed on every platform (not just Windows/JRuby) so the calendar generator can
+# convert the feed's UTC timestamps into the site's local timezone.
+gem "tzinfo", "~> 2.0"
+gem "tzinfo-data"
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?

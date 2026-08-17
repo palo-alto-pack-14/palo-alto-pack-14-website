@@ -27,11 +27,6 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
-      - name: Write Google Calendar key
-        env:
-          GCALENDAR_KEY_JSON: ${{ secrets.GCALENDAR_KEY_JSON }}
-        run: echo "$GCALENDAR_KEY_JSON" > gcalendar-key.json
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

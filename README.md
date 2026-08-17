@@ -4,14 +4,14 @@ A Jekyll-based website for Cub Scout Pack 14 in Palo Alto, CA.
 
 ## Overview
 
-This repository contains the source code for the Pack 14 website. The site is built using Jekyll, styled with TailwindCSS, and integrates with Google Calendar for event management.
+This repository contains the source code for the Pack 14 website. The site is built using Jekyll, styled with TailwindCSS, and integrates with the pack's Scoutbook Plus calendar for event management.
 
 We intend to create a more easily deployable template version of this site in the future. In the meantime, we've made this repository available to other Scouting America organizations so they can use it as a starting point for their own websites.
 
 ## Features
 
 - **Responsive Design**: Mobile-friendly layout using TailwindCSS
-- **Event Management**: Integration with Google Calendar for public and private events
+- **Event Management**: Integration with Scoutbook Plus for public and private events
 - **Downloadable Calendar Events**: Support for adding events to personal calendars (.ics)
 - **Leadership Directory**: Information about pack leadership
 - **Den Information**: Details about each den and meeting times
@@ -36,11 +36,12 @@ We intend to create a more easily deployable template version of this site in th
    bundle install
    ```
 
-3. Setup Google Calendar Integration
-   - Create a service account in Google Cloud Console
-   - Generate a key and save it as `gcalendar-key.json` in the root directory
-   - Share your Google Calendar with the service account email
-   - Update `_config.yml` with your calendar ID
+3. Setup Scoutbook Plus Calendar Integration
+   - In Scoutbook Plus, go to Calendar, scroll to the bottom, and copy the .ics
+     feed URL for your unit's calendar
+   - Add it to `scoutbook_calendars` in `_config.yml` (see the existing entry
+     for the shape). No API key or service account is needed — the feed is
+     fetched directly at build time by `_plugins/scoutbook_calendar.rb`.
 
 ### Development
 
@@ -113,4 +114,4 @@ For uses outside these terms, please contact [info@paloaltopack14.org].
 - [Jekyll](https://jekyllrb.com/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [GitHub Pages](https://pages.github.com/)
-- [jekyll-google-calendar](https://github.com/jekyll-plugin/jekyll-google-calendar)
+- [icalendar](https://github.com/icalendar/icalendar)
