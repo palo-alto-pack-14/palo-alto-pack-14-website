@@ -16,7 +16,7 @@ fullBleed: true
   </div>
   <div class="relative max-w-6xl px-6 py-24 mx-auto text-center text-white sm:py-32">
     <h1 class="text-4xl font-extrabold tracking-wide uppercase sm:text-5xl md:text-6xl text-cub-gold">
-      An Adventure of Fun and Friendship.
+      An Adventure of Fun and Friendship
     </h1>
     <p class="max-w-2xl mx-auto mt-4 text-lg sm:text-xl">
       Join <span class="font-semibold">Pack 14</span> - where Palo Alto kids explore, build, and grow.
