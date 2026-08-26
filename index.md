@@ -33,32 +33,6 @@ fullBleed: true
 </section>
 
 
-<!-- ICE CREAM SOCIAL PROMO -->
-<section class="px-6 py-8 sm:px-8 lg:px-10 bg-slate-50">
-  <div class="max-w-6xl mx-auto overflow-hidden rounded-3xl bg-[#e8e4d9]">
-    <div class="grid items-center gap-6 px-6 py-6 sm:px-10 sm:py-10 lg:grid-cols-2 lg:gap-0 lg:p-0">
-      <div class="flex justify-center p-4 lg:p-10">
-        <a href="/assets/docs/event-ice-cream-social-2026.pdf" target="_blank" rel="noopener" class="block group" aria-label="View Ice Cream Social flyer">
-          <img src="/assets/images/event-ice-cream-social-2026-preview.png" alt="Ice Cream Social event flyer" class="w-auto max-h-64 sm:max-h-80 lg:max-h-none lg:w-full h-auto rounded-xl shadow-md transition-opacity group-hover:opacity-95" loading="eager" decoding="async">
-        </a>
-      </div>
-      <div class="px-2 pb-6 text-center lg:text-left lg:px-10 lg:py-10">
-        <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">Featured Event</p>
-        <h2 class="mt-2 text-3xl font-extrabold tracking-wide uppercase sm:text-4xl" style="color:#2d7a2d;">Ice Cream Social</h2>
-        <p class="mt-3 text-lg text-slate-700">Celebrate the start of a new school year with a popsicle on us! Join Pack 14, meet the Scouts, and find out what Cub Scouting is all about. All families welcome.</p>
-        <a href="/assets/docs/event-ice-cream-social-2026.pdf" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 mt-6 px-6 py-3 font-bold rounded-xl text-white transition"
-           style="background-color:#2d7a2d;">
-          View Flyer
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- EVENTS / CALENDAR PREVIEW -->
 {%- assign now_epoch = site.time | date: "%s" -%}
 {%- assign shown = 0 -%}
