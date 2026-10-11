@@ -3,6 +3,10 @@ name: Deploy Jekyll site to Pages
 on:
   push:
     branches: ["main"]
+  # Rebuild periodically so new Scoutbook calendar events (fetched at build
+  # time by _plugins/scoutbook_calendar.rb) appear without a code push.
+  schedule:
+    - cron: "0 */3 * * *"
   workflow_dispatch:
 
 permissions:
